@@ -49,6 +49,24 @@ export default function ExperiencePage() {
           </article>
         </div>
       </section>
+
+      <section className="resume-layout leadership-layout">
+        <aside><p>Leadership</p><span>Making technical spaces more welcoming</span></aside>
+        <div className="resume-entries">
+          <article>
+            <div className="entry-heading"><div><h2>MESA Bootup Mentor</h2><p>California State University, East Bay</p></div><time>Aug.–Dec. 2025</time></div>
+            <p className="entry-copy">Guided incoming students through academic transition, career planning, and technical skill-building in a stipend-recognized mentorship role.</p>
+          </article>
+          <article>
+            <div className="entry-heading"><div><h2>Vice President</h2><p>Recreational Math & Computer Science Club</p></div><time>2024–2026</time></div>
+            <p className="entry-copy">Co-led a 30-member student organization and organized peer events blending strategy gameplay with computer science concepts for beginners.</p>
+          </article>
+          <article>
+            <div className="entry-heading"><div><h2>President</h2><p>BKM Youth Club · Community service</p></div><time>2020–2022</time></div>
+            <p className="entry-copy">Led a student volunteer organization that raised funds through community events and prepared meals for local homeless shelters.</p>
+          </article>
+        </div>
+      </section>
       <section className="resume-download"><div><p className="kicker">Full details</p><h2>Prefer the traditional version?</h2><p>Download the one-page résumé with complete technologies, coursework, and contact information.</p></div><a className="button button-dark" href="/Aakkash-Muthukumar-Resume.pdf" target="_blank" rel="noreferrer">Download résumé <span>↗</span></a></section>
       <SiteFooter />
     </main>

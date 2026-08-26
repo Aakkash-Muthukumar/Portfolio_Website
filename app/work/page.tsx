@@ -4,14 +4,14 @@ import { projects } from '@/lib/projects';
 
 export const metadata: Metadata = {
   title: 'Selected Work',
-  description: 'Machine learning, AI systems, low-level systems, and developer-tool projects by Aakkash Muthukumar.',
+  description: 'AI products, machine learning, accessibility, low-level systems, and developer-tool projects by Aakkash Muthukumar.',
 };
 
 export default function WorkPage() {
   return (
     <main>
       <SiteHeader />
-      <PageIntro eyebrow="Selected work · 2024–2026" title="Engineering work, explained beyond the headline." copy="Machine learning, local AI evaluation, low-level systems, and product prototypes. Each case study focuses on the problem, the technical decisions, and what the build taught me." />
+      <PageIntro eyebrow="Selected work · 2024–2026" title="Different projects. One consistent instinct: understand the system." copy="From an offline ASL translator and award-winning education platform to malware triage, source-linked RAG, and a 64-bit operating system. Each case study explains the decisions—not just the stack." />
       <section className="work-list">
         {projects.map((project, index) => <ProjectCard project={project} index={index} key={project.slug} />)}
       </section>

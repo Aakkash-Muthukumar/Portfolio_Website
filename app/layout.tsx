@@ -11,17 +11,17 @@ export const metadata: Metadata = {
     default: 'Aakkash Muthukumar | Software Engineer',
     template: '%s | Aakkash Muthukumar',
   },
-  description: 'Software engineering, machine learning, and systems work by Aakkash Muthukumar.',
+  description: 'AI products, machine learning, systems, and teaching by Aakkash Muthukumar—built with evidence, explainability, and a curiosity for the layer underneath.',
   openGraph: {
     title: 'Aakkash Muthukumar | Software Engineer',
-    description: 'Selected software engineering, machine learning, and systems work.',
+    description: 'AI products, machine learning, systems, and teaching—built with evidence and a curiosity for the layer underneath.',
     type: 'website',
     images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Aakkash Muthukumar. Software Engineering, Machine Learning, Systems.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Aakkash Muthukumar | Software Engineer',
-    description: 'Selected software engineering, machine learning, and systems work.',
+    description: 'AI products, machine learning, systems, and teaching—built with evidence and a curiosity for the layer underneath.',
     images: ['/og.png'],
   },
 };

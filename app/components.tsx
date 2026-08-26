@@ -42,7 +42,25 @@ export function ProjectArtwork({ slug }: { slug: string }) {
   if (slug === 'custom-64-bit-operating-system') {
     return <div className="artwork artwork-os"><div className="terminal"><div className="terminal-head"><i /><i /><i /></div><code><span>boot:</span> entering long mode<br /><span>gdt:</span> loaded<br /><span>paging:</span> initialized<br /><span>kernel:</span> ready<br /><b>akkash-os&gt; _</b></code></div></div>;
   }
-  return <div className="artwork artwork-scaffold"><div className="rubric"><p>WRITING PLAN</p><span><i /> Interpret the prompt</span><span><i /> Build an argument</span><span><i /> Support with evidence</span><span className="active"><i /> Revise for clarity</span><b>68% complete</b></div></div>;
+  if (slug === 'scaffold-writing-assistant') {
+    return <div className="artwork artwork-scaffold"><div className="rubric"><p>WRITING PLAN</p><span><i /> Interpret the prompt</span><span><i /> Build an argument</span><span><i /> Support with evidence</span><span className="active"><i /> Revise for clarity</span><b>68% complete</b></div></div>;
+  }
+  if (slug === 'ai-malware-triage') {
+    return <div className="artwork artwork-security"><div className="security-stack"><p>STATIC ANALYSIS</p><span><b>01</b> File type + PE headers <i>verified</i></span><span><b>02</b> YARA indicators <i>verified</i></span><span><b>03</b> Model interpretation <i>inferred</i></span><strong>NO EXECUTION · FAIL CLOSED</strong></div></div>;
+  }
+  if (slug === 'stem-forge') {
+    return <div className="artwork artwork-learning"><div className="learning-card"><p>STEM FORGE</p><h3>What do you want to learn?</h3><div><span>Adaptive quiz</span><span>Coding lab</span><span>Custom course</span></div><b>LOCAL MODEL · READY</b></div></div>;
+  }
+  if (slug === 'real-time-asl-translator') {
+    return <div className="artwork artwork-signal"><div className="signal-card"><span>CAMERA INPUT</span><div className="signal-wave"><i /><i /><i /><i /><i /></div><strong>GESTURE → TEXT → SPEECH</strong><small>OFFLINE · PRIVATE</small></div></div>;
+  }
+  if (slug === 'youtube-rag-chatbot') {
+    return <div className="artwork artwork-rag"><div className="rag-flow"><span>TRANSCRIPT</span><b>→</b><span>MILVUS</span><b>→</b><span>ANSWER</span><small>Source 12:42 ↗</small></div></div>;
+  }
+  if (slug === 'custom-linux-environment') {
+    return <div className="artwork artwork-os"><div className="terminal"><div className="terminal-head"><i /><i /><i /></div><code><span>systemctl:</span> active<br /><span>journal:</span> clean<br /><span>hyprland:</span> ready<br /><span>permissions:</span> verified<br /><b>aakkash@arch ~ $ _</b></code></div></div>;
+  }
+  return <div className="artwork artwork-roles"><div className="role-map"><p>ENROLLMENT NETWORK</p><div><span>STUDENT</span><span>INSTRUCTOR</span><span>ADMIN</span></div><strong>TCP/IP · ROLE-BASED ACCESS</strong></div></div>;
 }
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -50,7 +68,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
     <a className="work-card" href={`/work/${project.slug}`}>
       <ProjectArtwork slug={project.slug} />
       <div className="work-card-copy">
-        <div className="work-card-meta"><span>0{index + 1}</span><span>{project.year}</span></div>
+        <div className="work-card-meta"><span>{String(index + 1).padStart(2, '0')}</span><span>{project.year}</span></div>
         <p className="project-type">{project.discipline}</p>
         <h2>{project.shortTitle}</h2>
         <p>{project.summary}</p>
