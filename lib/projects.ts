@@ -13,7 +13,7 @@ export type Project = {
   result: string;
 };
 
-export const projects: Project[] = [
+const projectCatalog: Project[] = [
   {
     slug: 'radiography-classification',
     title: 'Radiography Image Classification',
@@ -244,7 +244,96 @@ export const projects: Project[] = [
     ],
     result: 'The project connected implementation with engineering process and taught me that good requirements reduce ambiguity long before the first difficult bug appears.',
   },
+  {
+    slug: 'codivus',
+    title: 'Codivus',
+    shortTitle: 'Codivus',
+    discipline: 'AI education · Offline-first software',
+    year: '2026',
+    summary: 'An offline AI programming-education platform combining local language models with retrieval-augmented learning workflows.',
+    overview: 'Codivus brings together React, FastAPI, Ollama, and retrieval-augmented generation to make programming support available without depending on a cloud-hosted model.',
+    technologies: ['React', 'FastAPI', 'Ollama', 'RAG', 'Local LLMs'],
+    metrics: [
+      { label: 'Execution', value: 'Offline first' },
+      { label: 'Interface', value: 'React' },
+      { label: 'Backend', value: 'FastAPI' },
+      { label: 'Knowledge layer', value: 'RAG' },
+    ],
+    challenge: 'Programming education tools often assume reliable connectivity and treat a model answer as the entire learning experience. Codivus explores how local AI can support learning without making cloud access a prerequisite.',
+    approach: [
+      'Used Ollama to run language models locally instead of routing every interaction through a hosted service.',
+      'Connected a React learning interface to a FastAPI backend for a clear separation between product and inference layers.',
+      'Added retrieval-augmented generation so assistance could be grounded in relevant learning material.',
+    ],
+    result: 'Codivus extends my local-first AI work into programming education, combining accessibility, practical deployment, and structured learning in one system.',
+  },
+  {
+    slug: 'benchmind',
+    title: 'BenchMind',
+    shortTitle: 'BenchMind',
+    discipline: 'AI agents · Evaluation',
+    year: 'Cal Hacks',
+    summary: 'An agent-benchmarking platform built during Cal Hacks to make AI-agent behavior easier to compare and reason about.',
+    overview: 'BenchMind grew from my interest in moving beyond impressive agent demos toward repeatable evaluation: defining tasks, observing behavior, and comparing results.',
+    technologies: ['AI Agents', 'Benchmarking', 'Evaluation', 'Hackathon'],
+    metrics: [
+      { label: 'Built at', value: 'Cal Hacks' },
+      { label: 'System type', value: 'Agent platform' },
+      { label: 'Focus', value: 'Evaluation' },
+      { label: 'Goal', value: 'Comparable behavior' },
+    ],
+    challenge: 'Agent systems can look capable in a single demonstration while behaving inconsistently across tasks. A useful evaluation platform needs to make those differences visible.',
+    approach: [
+      'Framed agent quality as a repeatable benchmarking problem rather than a one-off demo.',
+      'Organized evaluation around tasks and observable outcomes that could be compared.',
+      'Used the hackathon format to rapidly test the platform concept and interaction model.',
+    ],
+    result: 'BenchMind strengthened my interest in evaluation infrastructure: understanding not only what an AI system can do, but how reliably it does it.',
+  },
+  {
+    slug: 'curapoint',
+    title: 'CuraPoint',
+    shortTitle: 'CuraPoint',
+    discipline: 'Healthcare access · Product engineering',
+    year: '2026',
+    summary: 'A healthcare-access application exploring how software can make a complicated, high-friction journey easier to navigate.',
+    overview: 'CuraPoint applies my interest in practical, human-centered software to healthcare access—a domain where clarity and lower friction have direct value.',
+    technologies: ['Product Design', 'Healthcare Access', 'Application Development'],
+    metrics: [
+      { label: 'Domain', value: 'Healthcare' },
+      { label: 'Focus', value: 'Access' },
+      { label: 'Approach', value: 'Human centered' },
+      { label: 'Format', value: 'Application' },
+    ],
+    challenge: 'Healthcare access is often shaped by fragmented information and difficult workflows. The product challenge is to reduce confusion without oversimplifying decisions that matter.',
+    approach: [
+      'Centered the project on the access journey rather than adding technology for its own sake.',
+      'Mapped the experience around the information a person needs to move forward.',
+      'Treated clarity, trust, and low friction as core engineering requirements.',
+    ],
+    result: 'CuraPoint broadened my project work from technical systems into a consequential user problem, reinforcing that strong software begins with the experience it needs to improve.',
+  },
 ];
+
+const preferredOrder = [
+  'custom-64-bit-operating-system',
+  'ai-malware-triage',
+  'radiography-classification',
+  'stem-forge',
+  'codivus',
+  'benchmind',
+  'open-weight-llm-benchmarking',
+  'real-time-asl-translator',
+  'youtube-rag-chatbot',
+  'scaffold-writing-assistant',
+  'curapoint',
+  'custom-linux-environment',
+  'college-enrollment-system',
+];
+
+export const projects: Project[] = preferredOrder
+  .map((slug) => projectCatalog.find((project) => project.slug === slug))
+  .filter((project): project is Project => Boolean(project));
 
 export function getProject(slug: string) {
   return projects.find((project) => project.slug === slug);

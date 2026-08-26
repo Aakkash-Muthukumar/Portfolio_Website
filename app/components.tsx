@@ -40,6 +40,9 @@ export function ProjectArtwork({ slug }: { slug: string }) {
   if (slug === 'open-weight-llm-benchmarking') {
     return <div className="artwork artwork-benchmark"><div className="benchmark-chart"><span className="axis x" /><span className="axis y" /><i className="bar b1" /><i className="bar b2" /><i className="bar b3" /><i className="bar b4" /><b>QUALITY</b><em>LATENCY</em></div></div>;
   }
+  if (slug === 'benchmind') {
+    return <div className="artwork artwork-benchmark"><div className="benchmark-chart"><span className="axis x" /><span className="axis y" /><i className="bar b1" /><i className="bar b2" /><i className="bar b3" /><i className="bar b4" /><b>AGENT CONSISTENCY</b><em>TEST TASKS</em></div></div>;
+  }
   if (slug === 'custom-64-bit-operating-system') {
     return <div className="artwork artwork-os"><div className="terminal"><div className="terminal-head"><i /><i /><i /></div><code><span>boot:</span> entering long mode<br /><span>gdt:</span> loaded<br /><span>paging:</span> initialized<br /><span>kernel:</span> ready<br /><b>akkash-os&gt; _</b></code></div></div>;
   }
@@ -52,6 +55,9 @@ export function ProjectArtwork({ slug }: { slug: string }) {
   if (slug === 'stem-forge') {
     return <div className="artwork artwork-learning"><div className="learning-card"><p>STEM FORGE</p><h3>What do you want to learn?</h3><div><span>Adaptive quiz</span><span>Coding lab</span><span>Custom course</span></div><b>LOCAL MODEL · READY</b></div></div>;
   }
+  if (slug === 'codivus') {
+    return <div className="artwork artwork-learning"><div className="learning-card"><p>CODIVUS</p><h3>Programming help, running locally.</h3><div><span>Ask with context</span><span>Retrieve learning material</span><span>Practice in the flow</span></div><b>OLLAMA · OFFLINE</b></div></div>;
+  }
   if (slug === 'real-time-asl-translator') {
     return <div className="artwork artwork-signal"><div className="signal-card"><span>CAMERA INPUT</span><div className="signal-wave"><i /><i /><i /><i /><i /></div><strong>GESTURE → TEXT → SPEECH</strong><small>OFFLINE · PRIVATE</small></div></div>;
   }
@@ -60,6 +66,9 @@ export function ProjectArtwork({ slug }: { slug: string }) {
   }
   if (slug === 'custom-linux-environment') {
     return <div className="artwork artwork-os"><div className="terminal"><div className="terminal-head"><i /><i /><i /></div><code><span>systemctl:</span> active<br /><span>journal:</span> clean<br /><span>hyprland:</span> ready<br /><span>permissions:</span> verified<br /><b>aakkash@arch ~ $ _</b></code></div></div>;
+  }
+  if (slug === 'curapoint') {
+    return <div className="artwork artwork-care"><div className="care-path"><p>CURAPOINT</p><span><b>01</b> Understand the need</span><span><b>02</b> Find the next step</span><span><b>03</b> Move forward clearly</span><strong>HEALTHCARE ACCESS</strong></div></div>;
   }
   return <div className="artwork artwork-roles"><div className="role-map"><p>ENROLLMENT NETWORK</p><div><span>STUDENT</span><span>INSTRUCTOR</span><span>ADMIN</span></div><strong>TCP/IP · ROLE-BASED ACCESS</strong></div></div>;
 }

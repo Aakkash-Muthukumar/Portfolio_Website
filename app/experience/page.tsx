@@ -26,7 +26,7 @@ export default function ExperiencePage() {
           <article>
             <div className="entry-heading"><div><h2>Course Learning Assistant</h2><p>STEM Lab, California State University, East Bay</p></div><time>Jan. 2026–Present</time></div>
             <ul>
-              <li>Supported 25 CS 101 students with Python and C programming across assignments and labs.</li>
+              <li>Support 25 computer science students with Python and C programming across assignments and labs.</li>
               <li>Debug runtime errors, development environments, GCC, Makefiles, IDEs, and toolchain issues.</li>
               <li>Coach students through compiler output, gdb workflows, and systematic isolation of segmentation faults.</li>
             </ul>

@@ -3,9 +3,9 @@ import { ProjectCard, SiteFooter, SiteHeader } from '@/app/components';
 import { getProject } from '@/lib/projects';
 
 const featuredProjects = [
+  getProject('custom-64-bit-operating-system')!,
   getProject('ai-malware-triage')!,
   getProject('stem-forge')!,
-  getProject('custom-64-bit-operating-system')!,
 ];
 
 export default function Home() {
