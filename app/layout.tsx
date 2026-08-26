@@ -6,18 +6,22 @@ const manrope = Manrope({ variable: '--font-main', subsets: ['latin'] });
 const dmMono = DM_Mono({ variable: '--font-mono', subsets: ['latin'], weight: ['300', '400', '500'] });
 
 export const metadata: Metadata = {
-  title: 'Aakkash Muthukumar | AI Systems Engineer',
-  description: 'AI agents, offline-first tools, and dependable software systems by Aakkash Muthukumar.',
+  metadataBase: new URL('https://aakkash-muthukumar.taki7153.chatgpt.site'),
+  title: {
+    default: 'Aakkash Muthukumar | Software Engineer',
+    template: '%s | Aakkash Muthukumar',
+  },
+  description: 'Software engineering, machine learning, and systems work by Aakkash Muthukumar.',
   openGraph: {
-    title: 'Aakkash Muthukumar | AI Systems Engineer',
-    description: 'AI systems that work anywhere. Agents, offline AI, and dependable software.',
+    title: 'Aakkash Muthukumar | Software Engineer',
+    description: 'Selected software engineering, machine learning, and systems work.',
     type: 'website',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Aakkash Muthukumar, AI systems that work anywhere' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Aakkash Muthukumar. Software Engineering, Machine Learning, Systems.' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aakkash Muthukumar | AI Systems Engineer',
-    description: 'AI systems that work anywhere. Agents, offline AI, and dependable software.',
+    title: 'Aakkash Muthukumar | Software Engineer',
+    description: 'Selected software engineering, machine learning, and systems work.',
     images: ['/og.png'],
   },
 };
