@@ -7,6 +7,7 @@ export function SiteHeader() {
       <a className="brand" href="/">Aakkash Muthukumar</a>
       <nav aria-label="Primary navigation">
         <a href="/work">Work</a>
+        <a href="/journey">Journey</a>
         <a href="/experience">Experience</a>
         <a href="/about">About</a>
       </nav>

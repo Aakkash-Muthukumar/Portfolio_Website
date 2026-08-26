@@ -10,14 +10,14 @@ export default function AboutPage() {
   return (
     <main>
       <SiteHeader />
-      <PageIntro eyebrow="About" title="I’m happiest when the black box becomes understandable." copy="I’m a computer scientist from the Bay Area, moving to San Diego for graduate study. My work moves between AI and systems, but the throughline is consistent: make the complicated thing observable, defensible, and useful to someone." />
+      <PageIntro eyebrow="About" title="I’m happiest when the black box becomes understandable." copy="I’m a computer scientist from the Bay Area beginning graduate study at UC San Diego. My work moves between AI and systems, but the throughline is consistent: make the complicated thing observable, defensible, and useful to someone." />
       <section className="about-grid">
         <div className="about-portrait" aria-label="A graphic monogram for Aakkash Muthukumar"><span>AM</span><small>BAY AREA → SAN DIEGO</small></div>
         <div className="about-story">
           <p className="large-copy">I tend to learn by taking on work before I feel completely ready, then closing the gap by building, tracing, breaking, and rebuilding.</p>
           <p>That approach helped me complete my bachelor’s degree in three years while balancing technical projects, hackathons, an internship, coursework, leadership, and work as a Learning Assistant.</p>
           <p>My projects look broad on paper—medical imaging, local models, accessibility, security tooling, RAG, Linux, and an operating system—but they keep returning to the same ideas: evidence over magic, local execution where it matters, and interfaces that help people understand what the system is doing.</p>
-          <p>Arch Linux and Hyprland are my daily environment, not résumé decoration. Maintaining that setup keeps me close to the details. Photography gives me a different way to practice the same attention: slower, more observational, and focused on what is easy to miss.</p>
+          <p>Arch Linux and Hyprland are my daily environment, and my Windows home server runs an evolving mix of Docker, Jellyfin, Tailscale, remote access, and virtualization. Photography and mechanical watches—especially Spring Drive and Seiko—give me different ways to practice the same attention to systems and details.</p>
         </div>
       </section>
       <section className="principles">

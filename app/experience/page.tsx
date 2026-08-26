@@ -26,7 +26,7 @@ export default function ExperiencePage() {
           <article>
             <div className="entry-heading"><div><h2>Course Learning Assistant</h2><p>STEM Lab, California State University, East Bay</p></div><time>Jan. 2026–Present</time></div>
             <ul>
-              <li>Support 25 computer science students with Python and C programming across assignments and labs.</li>
+              <li>Supported 25 CS 101 students with Python and C programming across assignments and labs.</li>
               <li>Debug runtime errors, development environments, GCC, Makefiles, IDEs, and toolchain issues.</li>
               <li>Coach students through compiler output, gdb workflows, and systematic isolation of segmentation faults.</li>
             </ul>
@@ -40,7 +40,7 @@ export default function ExperiencePage() {
         <div className="resume-entries">
           <article>
             <div className="entry-heading"><div><h2>University of California, San Diego</h2><p>Master of Science in Computer Science</p></div><time>2026–2028</time></div>
-            <p className="entry-copy">Beginning graduate study in Fall 2026, with interests across machine learning, artificial intelligence, and software systems.</p>
+            <p className="entry-copy">Beginning graduate study with interests across artificial intelligence, machine learning, security, and software systems.</p>
           </article>
           <article>
             <div className="entry-heading"><div><h2>California State University, East Bay</h2><p>B.S. Computer Science · Summa Cum Laude</p></div><time>2023–2026</time></div>
