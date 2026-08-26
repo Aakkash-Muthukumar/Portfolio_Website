@@ -49,7 +49,7 @@ export default function ExperiencePage() {
           </article>
         </div>
       </section>
-      <section className="resume-download"><div><p className="kicker">Full details</p><h2>Prefer the traditional version?</h2><p>Download the one-page résumé with complete technologies, coursework, and contact information.</p></div><a className="button button-dark" href="/Aakkash-Muthukumar-Resume.pdf">Download résumé <span>↗</span></a></section>
+      <section className="resume-download"><div><p className="kicker">Full details</p><h2>Prefer the traditional version?</h2><p>Download the one-page résumé with complete technologies, coursework, and contact information.</p></div><a className="button button-dark" href="/Aakkash-Muthukumar-Resume.pdf" target="_blank" rel="noreferrer">Download résumé <span>↗</span></a></section>
       <SiteFooter />
     </main>
   );

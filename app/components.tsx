@@ -1,16 +1,16 @@
-import Link from 'next/link';
+/* eslint-disable @next/next/no-html-link-for-pages -- Vinext's client Link shim fails at runtime; hard navigation is intentional. */
 import type { Project } from '@/lib/projects';
 
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <Link className="brand" href="/">Aakkash Muthukumar</Link>
+      <a className="brand" href="/">Aakkash Muthukumar</a>
       <nav aria-label="Primary navigation">
-        <Link href="/work">Work</Link>
-        <Link href="/experience">Experience</Link>
-        <Link href="/about">About</Link>
+        <a href="/work">Work</a>
+        <a href="/experience">Experience</a>
+        <a href="/about">About</a>
       </nav>
-      <a className="header-cta" href="/Aakkash-Muthukumar-Resume.pdf">Résumé <span>↗</span></a>
+      <a className="header-cta" href="/Aakkash-Muthukumar-Resume.pdf" target="_blank" rel="noreferrer">Résumé <span>↗</span></a>
     </header>
   );
 }
@@ -25,8 +25,8 @@ export function SiteFooter() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 Aakkash Muthukumar</span>
-        <div><a href="https://linkedin.com/in/aakkashmuthukumar">LinkedIn ↗</a><a href="https://github.com/Aakkash-Muthukumar">GitHub ↗</a></div>
-        <Link href="/">Home ↑</Link>
+        <div><a href="https://linkedin.com/in/aakkashmuthukumar" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Aakkash-Muthukumar" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        <a href="/">Home ↑</a>
       </div>
     </footer>
   );
@@ -47,7 +47,7 @@ export function ProjectArtwork({ slug }: { slug: string }) {
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
-    <Link className="work-card" href={`/work/${project.slug}`}>
+    <a className="work-card" href={`/work/${project.slug}`}>
       <ProjectArtwork slug={project.slug} />
       <div className="work-card-copy">
         <div className="work-card-meta"><span>0{index + 1}</span><span>{project.year}</span></div>
@@ -57,7 +57,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         <ul>{project.technologies.slice(0, 4).map((tech) => <li key={tech}>{tech}</li>)}</ul>
         <span className="case-link">View case study <b>↗</b></span>
       </div>
-    </Link>
+    </a>
   );
 }
 

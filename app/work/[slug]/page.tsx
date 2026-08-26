@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ProjectArtwork, SiteFooter, SiteHeader } from '@/app/components';
 import { getProject, projects } from '@/lib/projects';
@@ -40,7 +39,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <section className="case-section"><div><p className="section-label">The challenge</p><h2>What made the problem worth solving</h2></div><p>{project.challenge}</p></section>
         <section className="case-section approach-section"><div><p className="section-label">The approach</p><h2>Turning the problem into an engineering plan</h2></div><ol>{project.approach.map((step, index) => <li key={step}><span>0{index + 1}</span><p>{step}</p></li>)}</ol></section>
         <section className="case-result"><p className="section-label">Result</p><p>{project.result}</p></section>
-        <Link className="next-project" href={`/work/${nextProject.slug}`}><span>Next case study</span><strong>{nextProject.shortTitle}</strong><b>→</b></Link>
+        <a className="next-project" href={`/work/${nextProject.slug}`}><span>Next case study</span><strong>{nextProject.shortTitle}</strong><b>→</b></a>
       </article>
       <SiteFooter />
     </main>
