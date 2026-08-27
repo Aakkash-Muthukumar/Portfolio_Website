@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { ProjectArtwork, SiteFooter, SiteHeader } from '@/app/components';
+import { ProjectArtwork, SiteFooter, SiteHeader, SystemMap } from '@/app/components';
 import { getProject, projects } from '@/lib/projects';
 
 export function generateStaticParams() {
@@ -36,6 +36,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <ProjectArtwork slug={project.slug} />
         <section className="case-overview"><p className="section-label">Overview</p><p>{project.overview}</p></section>
         <section className="metric-grid">{project.metrics.map((metric) => <div key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></div>)}</section>
+        <SystemMap project={project} />
         <section className="case-section"><div><p className="section-label">The challenge</p><h2>What made the problem worth solving</h2></div><p>{project.challenge}</p></section>
         <section className="case-section approach-section"><div><p className="section-label">The approach</p><h2>Turning the problem into an engineering plan</h2></div><ol>{project.approach.map((step, index) => <li key={step}><span>0{index + 1}</span><p>{step}</p></li>)}</ol></section>
         <section className="case-result"><p className="section-label">Result</p><p>{project.result}</p></section>

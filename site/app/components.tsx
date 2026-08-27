@@ -9,7 +9,7 @@ export function SiteHeader() {
         <a href="/work">Work</a>
         <a href="/journey">Journey</a>
         <a href="/experience">Experience</a>
-        <a href="/about">About</a>
+        <a href="/personal">Personal</a>
       </nav>
       <a className="header-cta" href="/Aakkash-Muthukumar-Resume.pdf" target="_blank" rel="noreferrer">Résumé <span>↗</span></a>
     </header>
@@ -26,7 +26,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 Aakkash Muthukumar</span>
-        <div><a href="https://linkedin.com/in/aakkashmuthukumar" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Aakkash-Muthukumar" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+        <div><a href="/about">About</a><a href="https://linkedin.com/in/aakkashmuthukumar" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Aakkash-Muthukumar" target="_blank" rel="noreferrer">GitHub ↗</a></div>
         <a href="/">Home ↑</a>
       </div>
     </footer>
@@ -74,6 +74,7 @@ export function ProjectArtwork({ slug }: { slug: string }) {
 }
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const proof = project.metrics[0];
   return (
     <a className="work-card" href={`/work/${project.slug}`}>
       <ProjectArtwork slug={project.slug} />
@@ -82,10 +83,39 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         <p className="project-type">{project.discipline}</p>
         <h2>{project.shortTitle}</h2>
         <p>{project.summary}</p>
+        <div className="card-proof"><strong>{proof.value}</strong><span>{proof.label}</span></div>
         <ul>{project.technologies.slice(0, 4).map((tech) => <li key={tech}>{tech}</li>)}</ul>
         <span className="case-link">View case study <b>↗</b></span>
       </div>
     </a>
+  );
+}
+
+const systemMaps: Record<string, [string, string, string]> = {
+  'custom-64-bit-operating-system': ['Assembly bootloader', 'GDT · paging · long mode', 'C kernel + shell'],
+  'ai-malware-triage': ['File + hash', 'PE · YARA · VirusTotal', 'Evidence-labeled report'],
+  'radiography-classification': ['≈17K X-rays', 'MobileNetV2 · Focal Loss', 'Prediction + Grad-CAM'],
+  'stem-forge': ['Learner request', 'FastAPI · Gemma · Ollama', 'Quiz · lab · course'],
+  codivus: ['Question + material', 'Retrieval · local LLM', 'Grounded guidance'],
+  benchmind: ['Benchmark task', 'Agent runner', 'Comparable traces'],
+  'open-weight-llm-benchmarking': ['Prompt suite', 'Local model families', 'Quality × latency'],
+  'real-time-asl-translator': ['Live webcam', 'OpenCV · Gemma 3n', 'Text + speech'],
+  'youtube-rag-chatbot': ['Transcript', 'Embeddings · Milvus', 'Source-linked answer'],
+  'scaffold-writing-assistant': ['Rubric + draft', 'Claude extension', 'Task-level feedback'],
+  curapoint: ['Healthcare need', 'Access workflow', 'Clear next step'],
+  'custom-linux-environment': ['Declarative setup', 'systemd · permissions', 'Daily environment'],
+  'college-enrollment-system': ['Three user roles', 'TCP server · access rules', 'Role-specific flows'],
+};
+
+export function SystemMap({ project }: { project: Project }) {
+  const stages = systemMaps[project.slug] ?? ['Input', 'Core system', 'Reviewable output'];
+  return (
+    <section className="system-section" aria-labelledby="system-heading">
+      <div className="system-heading"><p className="section-label">System map</p><h2 id="system-heading">How the pieces connect</h2></div>
+      <div className="system-map">
+        {stages.map((stage, index) => <div className="system-stage" key={stage}><span>0{index + 1}</span><strong>{stage}</strong>{index < stages.length - 1 && <b aria-hidden="true">→</b>}</div>)}
+      </div>
+    </section>
   );
 }
 
