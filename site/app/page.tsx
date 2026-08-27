@@ -15,28 +15,18 @@ export default function Home() {
       <section className="home-hero">
         <div className="hero-main">
           <p className="kicker">Portfolio · Software engineer · AI & systems</p>
-          <h1>I build intelligent software that shows its work.</h1>
+          <h1>I build intelligent software <span>that shows its work.</span></h1>
           <p className="hero-summary">I’m Aakkash, an M.S. Computer Science student at UC San Diego. I build AI products, low-level systems, and learning tools with observable behavior, defensible decisions, and a clear purpose.</p>
-          <div className="hero-links"><a className="button button-dark" href="/work">View selected work <span>→</span></a><a className="button button-quiet" href="mailto:Aakkash7153@gmail.com">Get in touch</a></div>
-        </div>
-        <aside className="profile-card" aria-label="Profile summary">
-          <div className="profile-status"><span /> Available for 2027 opportunities</div>
-          <dl><div><dt>Now</dt><dd>M.S. Computer Science<br />UC San Diego</dd></div><div><dt>Previously</dt><dd>B.S. Computer Science<br />Summa Cum Laude</dd></div><div><dt>Built around</dt><dd>AI · Systems<br />Security · Teaching</dd></div></dl>
-          <div className="profile-foot">
-            <span>AI products <i>·</i> Systems <i>·</i> Teaching</span>
-            <div className="profile-links">
+          <div className="hero-links">
+            <a className="button button-dark" href="/work">View selected work <span>→</span></a>
+            <div className="hero-socials" aria-label="Professional profiles">
               <a href="https://github.com/Aakkash-Muthukumar" target="_blank" rel="noreferrer">GitHub ↗</a>
               <a href="https://linkedin.com/in/aakkashmuthukumar" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+              <a href="mailto:Aakkash7153@gmail.com">Email ↗</a>
             </div>
           </div>
-        </aside>
-      </section>
-
-      <section className="home-proof" aria-label="Career highlights">
-        <div><strong>≈17K</strong><span>Images in an interpretable ML pipeline</span></div>
-        <div><strong>&gt;70%</strong><span>Manual work removed through automation</span></div>
-        <div><strong>Best AI</strong><span>Integration award at MESA U Hacks</span></div>
-        <div><strong>3 years</strong><span>B.S. completed Summa Cum Laude</span></div>
+          <p className="hero-status"><span /> UC San Diego · Available for 2027 opportunities</p>
+        </div>
       </section>
 
       <section className="home-work">
