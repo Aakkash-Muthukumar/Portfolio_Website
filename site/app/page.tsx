@@ -29,6 +29,7 @@ export default function Home() {
         </div>
         <aside className="hero-visual" aria-label="Aakkash Muthukumar — AI, systems, and security">
           <div className="hero-orbit">
+            <span className="hero-orbit-ring" aria-hidden="true" />
             <div className="hero-mark">
               <img src="/aakkash-portrait.jpg" alt="Portrait of Aakkash Muthukumar" />
             </div>
