@@ -42,8 +42,9 @@ a { color: inherit; text-decoration: none; }
 .profile-card dl div:last-child { border-bottom: 0; }
 .profile-card dt { color: #8a93a0; font: 500 10px var(--font-mono); text-transform: uppercase; }
 .profile-card dd { margin: 0; font-size: 13px; line-height: 1.55; font-weight: 650; }
-.profile-foot { padding: 17px 20px; background: #f3f5f8; border-radius: 0 0 10px 10px; color: #657080; font: 500 9px var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.profile-foot { padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 20px; background: #f3f5f8; border-radius: 0 0 10px 10px; color: #657080; font: 500 9px var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
 .profile-foot i { margin: 0 7px; color: var(--blue); font-style: normal; }
+.profile-links { display: flex; gap: 14px; color: var(--ink); letter-spacing: 0; }.profile-links a { padding-bottom: 2px; border-bottom: 1px solid #b8c0cc; transition: color 160ms ease-out, border-color 160ms ease-out; }.profile-links a:hover { color: var(--blue); border-color: var(--blue); }
 
 .featured-slice { border-top: 1px solid var(--line); background: var(--surface); padding: 100px max(24px, calc((100vw - var(--content))/2)) 130px; }
 .section-intro { display: grid; grid-template-columns: 1fr auto; align-items: end; margin-bottom: 42px; }

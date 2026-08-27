@@ -22,7 +22,13 @@ export default function Home() {
         <aside className="profile-card" aria-label="Profile summary">
           <div className="profile-status"><span /> Available for 2027 opportunities</div>
           <dl><div><dt>Now</dt><dd>M.S. Computer Science<br />UC San Diego</dd></div><div><dt>Previously</dt><dd>B.S. Computer Science<br />Summa Cum Laude</dd></div><div><dt>Built around</dt><dd>AI · Systems<br />Security · Teaching</dd></div></dl>
-          <div className="profile-foot">AI products <i>·</i> Systems <i>·</i> Teaching</div>
+          <div className="profile-foot">
+            <span>AI products <i>·</i> Systems <i>·</i> Teaching</span>
+            <div className="profile-links">
+              <a href="https://github.com/Aakkash-Muthukumar" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <a href="https://linkedin.com/in/aakkashmuthukumar" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            </div>
+          </div>
         </aside>
       </section>
 
