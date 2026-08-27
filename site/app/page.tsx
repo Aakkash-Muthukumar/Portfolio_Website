@@ -28,10 +28,9 @@ export default function Home() {
           <p className="hero-status"><span /> UC San Diego · Available for 2027 opportunities</p>
         </div>
         <aside className="hero-visual" aria-label="Aakkash Muthukumar — AI, systems, and security">
-          <div className="hero-orbit" aria-hidden="true">
+          <div className="hero-orbit">
             <div className="hero-mark">
-              <span>AM</span>
-              <small>Aakkash Muthukumar</small>
+              <img src="/aakkash-portrait.jpg" alt="Portrait of Aakkash Muthukumar" />
             </div>
           </div>
           <div className="hero-visual-caption">

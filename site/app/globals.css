@@ -35,10 +35,8 @@ a { color: inherit; text-decoration: none; }
 .hero-orbit { width: 100%; aspect-ratio: 1; position: relative; display: grid; place-items: center; border-radius: 50%; background: conic-gradient(from 12deg, var(--blue) 0 7deg, transparent 7deg 76deg, #93a8ee 76deg 83deg, transparent 83deg 192deg, var(--blue) 192deg 214deg, transparent 214deg 318deg, #93a8ee 318deg 325deg, transparent 325deg); }
 .hero-orbit::before { content: ''; position: absolute; inset: 5px; border: 1px solid #cdd6ef; border-radius: 50%; background: var(--bg); }
 .hero-orbit::after { content: 'AI  /  SYSTEMS  /  SECURITY'; position: absolute; right: -7px; top: 15%; padding: 8px 10px; border: 1px solid var(--line); background: var(--bg); color: #657080; font: 500 8px var(--font-mono); letter-spacing: .09em; }
-.hero-mark { width: 82%; aspect-ratio: 1; z-index: 1; position: relative; display: grid; place-items: center; overflow: hidden; border-radius: 50%; background-color: #172033; background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px); background-size: 36px 36px; box-shadow: 0 28px 70px rgba(17,24,39,.18); color: #fff; }
-.hero-mark::before { content: ''; position: absolute; width: 54%; aspect-ratio: 1; border: 1px solid rgba(145,169,255,.42); border-radius: 50%; }
-.hero-mark span { z-index: 1; margin-left: -.07em; font-size: clamp(90px, 10vw, 145px); font-weight: 800; letter-spacing: -.11em; }
-.hero-mark small { position: absolute; left: 12%; bottom: 11%; color: #aeb9cb; font: 500 8px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; }
+.hero-mark { width: 82%; aspect-ratio: 1; z-index: 1; position: relative; overflow: hidden; border: 5px solid var(--surface); border-radius: 50%; background: #172033; box-shadow: 0 28px 70px rgba(17,24,39,.2); }
+.hero-mark img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 38%; }
 .hero-visual-caption { width: 78%; margin: -25px 0 0 auto; z-index: 2; position: relative; padding: 18px 20px; border: 1px solid var(--line); background: rgba(255,255,255,.96); box-shadow: 0 14px 35px rgba(17,24,39,.08); }
 .hero-visual-caption span { display: block; margin-bottom: 8px; color: var(--blue); font: 500 8px var(--font-mono); letter-spacing: .09em; text-transform: uppercase; }
 .hero-visual-caption strong { display: block; max-width: 280px; font-size: 14px; line-height: 1.45; letter-spacing: -.015em; }
